@@ -1,0 +1,29 @@
+{
+  "name": "bug-killer",
+  "version": "0.1.0",
+  "description": "A colored way to find bugs and fix them.",
+  "main": "index.js",
+  "dependencies": {
+    "couleurs": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-bug-killer.git"
+  },
+  "keywords": [
+    "bugs",
+    "debug",
+    "killer",
+    "node"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-bug-killer/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-bug-killer"
+}
