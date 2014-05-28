@@ -10,6 +10,43 @@ $ cd bug-killer
 $ npm install
 ```
 
+## Documentation
+
+### Methods
+#### `log(message, type)`
+Displays debug messages by providing the type.
+
+ - `message` (String): The debug message that should be displayed
+ - `type` (String): The message type (e.g. "error", "info" etc)
+
+Returns the BugKiller instance
+
+### Other fields
+
+#### `_config`
+An object contaning the configuration of the module.
+Default:
+
+```js
+{
+    error: {
+        color: [255, 0, 0]
+      , text: "ERROR"
+    }
+  , info: {
+        color: [0, 200, 255]
+      , text: "INFO"
+    }
+  , warn: {
+        color: [200, 200, 0]
+      , text: "WARN"
+    }
+  , displayDate: true
+};
+```
+
+It can be extended to accept any type of message (see example).
+
 ## Example
 
 ```js
