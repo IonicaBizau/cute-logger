@@ -3,7 +3,7 @@ var Debug = require("../index");
 
 // Test defaults
 Debug
-  .log("Some fancy error message", "error")
+  .log("A fancy error message", "error")
   .log("Info messages are useful", "info")
   .log("Hey, you've got a warning", "warn")
   ;
