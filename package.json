@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-bug-killer/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-bug-killer"
+  "homepage": "https://github.com/IonicaBizau/node-bug-killer",
+  "directories": {
+    "test": "test"
+  }
 }
