@@ -88,5 +88,13 @@ Debug.log("This is a custom message type", "myType");
 4. Open a pull request, and reference the initial issue in the pull request
    message.
 
+## Changelog
+
+### `v0.1.1`
+ - Implemented log level
+
+### `v0.1.0`
+ - Initial release
+
 ## License
 See the [LICENSE](./LICENSE) file.
