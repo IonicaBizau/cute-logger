@@ -1,6 +1,6 @@
 {
   "name": "bug-killer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A colored way to find bugs and fix them.",
   "main": "index.js",
   "dependencies": {
