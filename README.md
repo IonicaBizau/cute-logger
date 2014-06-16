@@ -32,17 +32,21 @@ Default:
     error: {
         color: [255, 0, 0]
       , text: "ERROR"
-    }
-  , info: {
-        color: [0, 200, 255]
-      , text: "INFO"
+      , level: 1
     }
   , warn: {
         color: [200, 200, 0]
       , text: "WARN"
+      , level: 2
+    }
+  , info: {
+        color: [0, 200, 255]
+      , text: "INFO"
+      , level: 3
     }
   , displayDate: true
-};
+  , logLevel: 2
+}
 ```
 
 It can be extended to accept any type of message (see example).

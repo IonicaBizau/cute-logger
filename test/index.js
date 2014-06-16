@@ -1,6 +1,8 @@
 // Dependencies
 var Debug = require("../index");
 
+Debug._config.logLevel = 4;
+
 // Test defaults
 Debug
   .log("A fancy error message", "error")

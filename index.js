@@ -42,11 +42,16 @@ BugKiller.log = function (message, type) {
         return BugKiller;
     }
 
+    if (type.level > BugKiller._config.logLevel) {
+        return BugKiller;
+    }
+
     // Build message
     logMessage += "\x1B[1m" + type.text.rgb(type.color) + "\x1B[22m ";
     if (BugKiller._config.displayDate) {
         logMessage += "[" + new Date() + "] ";
     }
+
     logMessage += message;
 
     // Print message
@@ -59,14 +64,18 @@ BugKiller._config = {
     error: {
         color: [255, 0, 0]
       , text: "ERROR"
-    }
-  , info: {
-        color: [0, 200, 255]
-      , text: "INFO"
+      , level: 1
     }
   , warn: {
         color: [200, 200, 0]
       , text: "WARN"
+      , level: 2
+    }
+  , info: {
+        color: [0, 200, 255]
+      , text: "INFO"
+      , level: 3
     }
   , displayDate: true
+  , logLevel: 2
 };
