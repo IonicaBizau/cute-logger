@@ -5,7 +5,7 @@ var Couleurs = require("couleurs")();
 var BugKiller = module.exports = {};
 
 // Config
-BugKiller._config = {
+BugKiller.config = {
     error: {
         color: [192, 57, 43]
       , text: "error"
@@ -40,14 +40,14 @@ BugKiller.log = function (message, type) {
     var logMessage = "";
 
     // Get type from config
-    type = BugKiller._config[type];
-    if (type.level > BugKiller._config.logLevel) {
+    type = BugKiller.config[type];
+    if (type.level > BugKiller.config.logLevel) {
         return BugKiller;
     }
 
     // Build message
     logMessage += Couleurs.bold(Couleurs.rgb(type.text, type.color)) + " ";
-    if (BugKiller._config.displayDate) {
+    if (BugKiller.config.displayDate) {
         logMessage += "[" + new Date() + "] ";
     }
 
