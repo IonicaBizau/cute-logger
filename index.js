@@ -30,10 +30,12 @@ BugKiller.log = function (message, type) {
         logMessage += "[" + new Date() + "] ";
     }
 
+    // Add message
     logMessage += message;
 
     // Print message
     console.log(logMessage);
+
     return BugKiller;
 };
 
