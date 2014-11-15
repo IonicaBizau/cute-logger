@@ -17,7 +17,7 @@ Debug.log("Display date is disabled.", "info");
 // Custom type
 Debug._config.myType = {
     color: [0, 255, 200]
-  , text: "CUSTOM"
+  , text: "custom"
 };
 
 Debug.log("This is a custom message type", "myType");
