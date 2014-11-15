@@ -96,6 +96,14 @@ It can be extended to accept any type of message (see example).
 
 # Changelog
 
+## `1.0.0`
+ - Removed almost useless if statement that was checking if `type` is valid. The programmer is responsible for that and should use existing message types.
+ - Updated `couleurs` dependency.
+ - Lowercase message types.
+ - `_config` becomes `config`
+ - `getDate` handler. Fixes #3.
+ - Use `process.stdout.isTTY` to handle redirected output. Fixes #2.
+
 ## `v0.1.1`
  - Implemented log level
 
