@@ -4,6 +4,27 @@ var Couleurs = require("couleurs")();
 // Constructor
 var BugKiller = module.exports = {};
 
+// Config
+BugKiller._config = {
+    error: {
+        color: [192, 57, 43]
+      , text: "error"
+      , level: 1
+    }
+  , warn: {
+        color: [241, 196, 15]
+      , text: "warn "
+      , level: 2
+    }
+  , info: {
+        color: [52, 152, 219]
+      , text: "info "
+      , level: 3
+    }
+  , displayDate: true
+  , logLevel: 2
+};
+
 /**
  * log
  * Displays debug messages by providing the type.
@@ -37,25 +58,4 @@ BugKiller.log = function (message, type) {
     console.log(logMessage);
 
     return BugKiller;
-};
-
-// Config
-BugKiller._config = {
-    error: {
-        color: [192, 57, 43]
-      , text: "error"
-      , level: 1
-    }
-  , warn: {
-        color: [241, 196, 15]
-      , text: "warn "
-      , level: 2
-    }
-  , info: {
-        color: [52, 152, 219]
-      , text: "info "
-      , level: 3
-    }
-  , displayDate: true
-  , logLevel: 2
 };
