@@ -82,6 +82,11 @@ BugKiller.log = function (message, type) {
     // Add message
     logMessage += message;
 
+    // No fun when stdout is not TTY
+    if (!process.stdout.isTTY) {
+        logMessage = logMessage.replace(/\u001b\[.*?m/g, "");
+    }
+
     // Print message
     console.log(logMessage);
 
