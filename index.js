@@ -1,5 +1,5 @@
 // Dependencies
-var Couleurs = require("couleurs");
+var Couleurs = require("couleurs")();
 
 // Constructor
 var BugKiller = module.exports = {};
@@ -20,34 +20,12 @@ BugKiller.log = function (message, type) {
 
     // Get type from config
     type = BugKiller._config[type];
-
-    // Type is doesn't exist in config
-    if (typeof type !== "object") {
-
-        console.warn("Invalid type: " + type
-            + ". Configure it in BugKiller._config following the documentation"
-            + "and your message will appear correctly."
-        );
-
-        // Build the message that will be printed
-        logMessage += "UNKNOWN ";
-        if (BugKiller._config.displayDate) {
-            logMessage += "[" + new Date() + "] ";
-        }
-        logMessage += message;
-
-        // Print message
-        console.log(logMessage);
-
-        return BugKiller;
-    }
-
     if (type.level > BugKiller._config.logLevel) {
         return BugKiller;
     }
 
     // Build message
-    logMessage += "\x1B[1m" + type.text.rgb(type.color) + "\x1B[22m ";
+    logMessage += Couleurs.bold(Couleurs.rgb(type.text, type.color)) + " ";
     if (BugKiller._config.displayDate) {
         logMessage += "[" + new Date() + "] ";
     }
@@ -63,17 +41,17 @@ BugKiller.log = function (message, type) {
 BugKiller._config = {
     error: {
         color: [255, 0, 0]
-      , text: "ERROR"
+      , text: "error"
       , level: 1
     }
   , warn: {
         color: [200, 200, 0]
-      , text: "WARN"
+      , text: "warn"
       , level: 2
     }
   , info: {
         color: [0, 200, 255]
-      , text: "INFO"
+      , text: "info"
       , level: 3
     }
   , displayDate: true
