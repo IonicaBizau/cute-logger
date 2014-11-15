@@ -42,18 +42,18 @@ BugKiller.log = function (message, type) {
 // Config
 BugKiller._config = {
     error: {
-        color: [255, 0, 0]
+        color: [192, 57, 43]
       , text: "error"
       , level: 1
     }
   , warn: {
-        color: [200, 200, 0]
-      , text: "warn"
+        color: [241, 196, 15]
+      , text: "warn "
       , level: 2
     }
   , info: {
-        color: [0, 200, 255]
-      , text: "info"
+        color: [52, 152, 219]
+      , text: "info "
       , level: 3
     }
   , displayDate: true
