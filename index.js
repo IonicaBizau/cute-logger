@@ -1,8 +1,57 @@
 // Dependencies
-var Couleurs = require("couleurs");
+var Couleurs = require("couleurs")();
 
 // Constructor
 var BugKiller = module.exports = {};
+
+// Config
+BugKiller.config = {
+    error: {
+        color: [192, 57, 43]
+      , text: "error"
+      , level: 1
+    }
+  , warn: {
+        color: [241, 196, 15]
+      , text: "warn "
+      , level: 2
+    }
+  , info: {
+        color: [52, 152, 219]
+      , text: "info "
+      , level: 3
+    }
+  , displayDate: true
+  , logLevel: 2
+};
+
+/**
+ * getDate
+ * Returns the stringified date. This method can be overrided for a custom date format.
+ *
+ * @name getDate
+ * @function
+ * @return {String} The date in HH:mm.ss - DD.MM.YYYY format.
+ */
+BugKiller.getDate = function () {
+
+    var date = new Date()
+      , hour = date.getHours()
+      , min  = date.getMinutes()
+      , sec  = date.getSeconds()
+      , year = date.getFullYear()
+      , month = date.getMonth() + 1
+      , day  = date.getDate()
+      ;
+
+    hour = (hour < 10 ? "0" : "") + hour;
+    min = (min < 10 ? "0" : "") + min;
+    sec = (sec < 10 ? "0" : "") + sec;
+    month = (month < 10 ? "0" : "") + month;
+    day = (day < 10 ? "0" : "") + day;
+
+    return "[" + hour + ":" + min + "." + sec + " - " + day + "." + month + "." + year + "]";
+};
 
 /**
  * log
@@ -19,63 +68,27 @@ BugKiller.log = function (message, type) {
     var logMessage = "";
 
     // Get type from config
-    type = BugKiller._config[type];
-
-    // Type is doesn't exist in config
-    if (typeof type !== "object") {
-
-        console.warn("Invalid type: " + type
-            + ". Configure it in BugKiller._config following the documentation"
-            + "and your message will appear correctly."
-        );
-
-        // Build the message that will be printed
-        logMessage += "UNKNOWN ";
-        if (BugKiller._config.displayDate) {
-            logMessage += "[" + new Date() + "] ";
-        }
-        logMessage += message;
-
-        // Print message
-        console.log(logMessage);
-
-        return BugKiller;
-    }
-
-    if (type.level > BugKiller._config.logLevel) {
+    type = BugKiller.config[type];
+    if (type.level > BugKiller.config.logLevel) {
         return BugKiller;
     }
 
     // Build message
-    logMessage += "\x1B[1m" + type.text.rgb(type.color) + "\x1B[22m ";
-    if (BugKiller._config.displayDate) {
-        logMessage += "[" + new Date() + "] ";
+    logMessage += Couleurs.bold(Couleurs.rgb(type.text, type.color)) + " ";
+    if (BugKiller.config.displayDate) {
+        logMessage += BugKiller.getDate() + " ";
     }
 
+    // Add message
     logMessage += message;
+
+    // No fun when stdout is not TTY
+    if (!process.stdout.isTTY) {
+        logMessage = logMessage.replace(/\u001b\[.*?m/g, "");
+    }
 
     // Print message
     console.log(logMessage);
-    return BugKiller;
-};
 
-// Config
-BugKiller._config = {
-    error: {
-        color: [255, 0, 0]
-      , text: "ERROR"
-      , level: 1
-    }
-  , warn: {
-        color: [200, 200, 0]
-      , text: "WARN"
-      , level: 2
-    }
-  , info: {
-        color: [0, 200, 255]
-      , text: "INFO"
-      , level: 3
-    }
-  , displayDate: true
-  , logLevel: 2
+    return BugKiller;
 };

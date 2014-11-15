@@ -1,7 +1,8 @@
 // Dependencies
 var Debug = require("../index");
 
-Debug._config.logLevel = 4;
+// Set log level
+Debug.config.logLevel = 4;
 
 // Test defaults
 Debug
@@ -11,13 +12,13 @@ Debug
   ;
 
 // Don't show date
-Debug._config.displayDate = false;
+Debug.config.displayDate = false;
 Debug.log("Display date is disabled.", "info");
 
 // Custom type
-Debug._config.myType = {
+Debug.config.myType = {
     color: [0, 255, 200]
-  , text: "CUSTOM"
+  , text: "custom"
 };
 
 Debug.log("This is a custom message type", "myType");

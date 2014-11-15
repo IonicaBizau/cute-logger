@@ -1,61 +1,15 @@
-# bug-killer
+Bug Killer
+==========
 A colored way to find bugs and fix them.
 
-## Installation
-Run the following commands to download and install the application:
-
-```sh
-$ git clone git@github.com:IonicaBizau/node-bug-killer.git bug-killer
-$ cd bug-killer
-$ npm install
-```
-
-## Documentation
-
-### Methods
-#### `log(message, type)`
-Displays debug messages by providing the type.
-
- - `message` (String): The debug message that should be displayed
- - `type` (String): The message type (e.g. "error", "info" etc)
-
-Returns the BugKiller instance
-
-### Other fields
-
-#### `_config`
-An object contaning the configuration of the module.
-Default:
-
-```js
-{
-    error: {
-        color: [255, 0, 0]
-      , text: "ERROR"
-      , level: 1
-    }
-  , warn: {
-        color: [200, 200, 0]
-      , text: "WARN"
-      , level: 2
-    }
-  , info: {
-        color: [0, 200, 255]
-      , text: "INFO"
-      , level: 3
-    }
-  , displayDate: true
-  , logLevel: 2
-}
-```
-
-It can be extended to accept any type of message (see example).
-
-## Example
+# Example
 
 ```js
 // Dependencies
 var Debug = require("../index");
+
+// Set log level
+Debug.config.logLevel = 4;
 
 // Test defaults
 Debug
@@ -65,19 +19,71 @@ Debug
   ;
 
 // Don't show date
-Debug._config.displayDate = false;
+Debug.config.displayDate = false;
 Debug.log("Display date is disabled.", "info");
 
 // Custom type
-Debug._config.myType = {
+Debug.config.myType = {
     color: [0, 255, 200]
-  , text: "CUSTOM"
+  , text: "custom"
 };
 
 Debug.log("This is a custom message type", "myType");
 ```
 
-## How to contribute
+# Documentation
+
+## Methods
+
+### `getDate()`
+Returns the stringified date. This method can be overrided for a custom date format.
+
+#### Return
+- **String** The date in HH:mm.ss - DD.MM.YYYY format.
+
+### `log(message, type)`
+Displays debug messages by providing the type.
+
+#### Params
+- **String** `message`: The debug message that should be displayed
+- **String** `type`: The message type (e.g. "error", "info" etc)
+
+#### Return
+- **Object** BugKiller instance
+
+
+## Other fields
+
+### `config`
+An object contaning the configuration of the module.
+Default:
+
+```js
+// Config
+BugKiller.config = {
+    error: {
+        color: [192, 57, 43]
+      , text: "error"
+      , level: 1
+    }
+  , warn: {
+        color: [241, 196, 15]
+      , text: "warn "
+      , level: 2
+    }
+  , info: {
+        color: [52, 152, 219]
+      , text: "info "
+      , level: 3
+    }
+  , displayDate: true
+  , logLevel: 2
+};
+```
+
+It can be extended to accept any type of message (see example).
+
+# How to contribute
 
 1. File an issue in the repository, using the bug tracker, describing the
    contribution you'd like to make. This will help us to get you started on the
@@ -88,13 +94,21 @@ Debug.log("This is a custom message type", "myType");
 4. Open a pull request, and reference the initial issue in the pull request
    message.
 
-## Changelog
+# Changelog
 
-### `v0.1.1`
+## `1.0.0`
+ - Removed almost useless if statement that was checking if `type` is valid. The programmer is responsible for that and should use existing message types.
+ - Updated `couleurs` dependency.
+ - Lowercase message types.
+ - `_config` becomes `config`
+ - `getDate` handler. Fixes #3.
+ - Use `process.stdout.isTTY` to handle redirected output. Fixes #2.
+
+## `v0.1.1`
  - Implemented log level
 
-### `v0.1.0`
+## `v0.1.0`
  - Initial release
 
-## License
-See the [LICENSE](./LICENSE) file.
+# License
+See the [LICENSE](/LICENSE) file.
