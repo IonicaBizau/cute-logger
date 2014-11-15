@@ -76,7 +76,7 @@ BugKiller.log = function (message, type) {
     // Build message
     logMessage += Couleurs.bold(Couleurs.rgb(type.text, type.color)) + " ";
     if (BugKiller.config.displayDate) {
-        logMessage += BugKiller.getDate();
+        logMessage += BugKiller.getDate() + " ";
     }
 
     // Add message
