@@ -1,5 +1,5 @@
 // Dependencies
-var Debug = require("../index");
+var Debug = require("../lib");
 
 // Set log level
 Debug.config.logLevel = 4;
