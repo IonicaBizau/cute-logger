@@ -4,7 +4,8 @@
   "description": "A colored way to find bugs and fix them.",
   "main": "lib/index.js",
   "dependencies": {
-    "couleurs": "^1.1.0"
+    "couleurs": "4.0.0",
+    "ansi-parser": "2.0.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -21,7 +22,7 @@
     "node"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-bug-killer/issues"
   },
