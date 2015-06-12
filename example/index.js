@@ -2,7 +2,7 @@
 var Debug = require("../lib");
 
 // Set log level
-Debug.config.logLevel = 4;
+Debug.config.level = 4;
 
 // Test defaults
 Debug
@@ -12,7 +12,7 @@ Debug
   ;
 
 // Don't show date
-Debug.config.displayDate = false;
+Debug.config.date = false;
 Debug.log("Display date is disabled.", "info");
 
 // Custom type
