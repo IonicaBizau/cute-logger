@@ -22,3 +22,5 @@ Debug.config.myType = {
 };
 
 Debug.log("This is a custom message type", "myType");
+Debug.log(new Error("Some error"));
+Debug.log("Some interesting message");
