@@ -2,7 +2,7 @@
   "name": "bug-killer",
   "version": "1.0.0",
   "description": "A colored way to find bugs and fix them.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "couleurs": "^1.1.0"
   },
