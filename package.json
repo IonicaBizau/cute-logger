@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "dependencies": {
     "couleurs": "4.0.0",
-    "ansi-parser": "2.0.0"
+    "ansi-parser": "2.0.0",
+    "deffy": "1.0.0",
+    "typpy": "1.0.0"
   },
   "devDependencies": {},
   "scripts": {
