@@ -1,7 +1,7 @@
 {
   "name": "bug-killer",
   "version": "2.0.0",
-  "description": "A colored way to find bugs and fix them.",
+  "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
     "couleurs": "5.0.0",

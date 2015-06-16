@@ -15,7 +15,7 @@
 
 # bug-killer [![Donate now][donate-now]][paypal-donations]
 
-A colored way to find bugs and fix them.
+Simple way to log messages in stdout or other stream.
 
 ## Installation
 
