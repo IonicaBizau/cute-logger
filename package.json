@@ -1,6 +1,6 @@
 {
   "name": "bug-killer",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
