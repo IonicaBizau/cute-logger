@@ -1,6 +1,6 @@
 {
   "name": "bug-killer",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
@@ -23,7 +23,7 @@
     "killer",
     "node"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
   "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-bug-killer/issues"
