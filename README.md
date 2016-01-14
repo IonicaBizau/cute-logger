@@ -1,6 +1,6 @@
-# bug-killer [![Support this project][donate-now]][paypal-donations]
+# bug-killer [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-bug-killer.svg)](https://travis-ci.org/IonicaBizau/node-bug-killer/) [![Version](https://img.shields.io/npm/v/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Downloads](https://img.shields.io/npm/dt/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-Simple way to log messages in stdout or other stream.
+> Simple way to log messages in stdout or other stream.
 
 ## Installation
 
