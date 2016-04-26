@@ -1,6 +1,6 @@
 {
   "name": "bug-killer",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
@@ -31,5 +31,16 @@
   "homepage": "https://github.com/IonicaBizau/node-bug-killer",
   "directories": {
     "example": "example"
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ]
 }
