@@ -1,14 +1,18 @@
+
 # bug-killer [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-bug-killer.svg)](https://travis-ci.org/IonicaBizau/node-bug-killer/) [![Version](https://img.shields.io/npm/v/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Downloads](https://img.shields.io/npm/dt/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Simple way to log messages in stdout or other stream.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save bug-killer
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
@@ -39,7 +43,8 @@ Debug.log(new Error("Some error"));
 Debug.log("Some interesting message");
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `getDate()`
 Returns the stringified date. This method can be overrided for a custom date format.
@@ -97,79 +102,51 @@ BugKiller.config = {
 #### Return
 - **Object** The `BugKiller` instance.
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`a-csv`](https://github.com/jillix/a-csv) by jillix
 
- - [`bible`](https://github.com/BibleJS/BibleApp)
+ - [`a-csv`](https://github.com/jillix/a-csv) (by jillix)—A lightweight CSV parser.
+ - [`bible`](https://github.com/BibleJS/BibleApp)—Read the Holy Bible via the command line.
+ - [`birthday`](https://github.com/IonicaBizau/birthday)—Know when a friend's birthday is coming.
+ - [`blah`](https://github.com/IonicaBizau/blah)—A command line tool to optimize the repetitive actions.
+ - [`bloggify`](https://github.com/Bloggify/bloggify-tools)—A set of tools for Bloggify administration.
+ - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)—Easy way to import a library into CDNJS.
+ - [`cli-gh-cal`](https://github.com/IonicaBizau/cli-gh-cal)—GitHub like calendar graphs in command line.
+ - [`diable`](https://github.com/IonicaBizau/diable)—Daemonize the things out.
+ - [`engine-tools`](https://github.com/jillix/engine-tools) (by jillix)—Engine Tools library and CLI app.
+ - [`fwatcher`](https://github.com/IonicaBizau/node-fwatcher)—Watch files for changes.
+ - [`ghcal`](https://github.com/IonicaBizau/ghcal)—See the GitHub contributions calendar of a user in the command line.
+ - [`gif-cli`](https://github.com/IonicaBizau/gif-cli)—Gif animations in your terminal!
+ - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
+ - [`git-stats`](https://github.com/IonicaBizau/git-stats)—Local git statistics including GitHub-like contributions calendars.
+ - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)—Imports your commits from a repository into git-stats history.
+ - [`github-colors`](https://github.com/IonicaBizau/github-colors)—GitHub colors and file extensions mapping
+ - [`github-labeller`](https://github.com/IonicaBizau/github-labeller#readme)—Automagically create issue labels in your GitHub projects.
+ - [`github-stats`](https://github.com/IonicaBizau/github-stats)—Visualize stats about GitHub users and projects in your terminal.
+ - [`gpm`](https://github.com/IonicaBizau/gpm)—npm + git = gpm - Install NPM packages and dependencies from git repositories.
+ - [`idea`](https://github.com/IonicaBizau/idea)—A lightweight CLI tool and module for keeping ideas in a safe place quick and easy.
+ - [`image-to-ascii-cli`](https://github.com/IonicaBizau/image-to-ascii-cli#readme)—View images in text format, in your terminal.
+ - [`name-it`](https://github.com/IonicaBizau/name-it#readme)—Generate project names from given keywords.
+ - [`namy`](https://github.com/IonicaBizau/namy)—Gets the name of the exported function.
+ - [`npmreserve`](https://github.com/IonicaBizau/npmreserve)—Reserve package names on NPM.
+ - [`regarde`](https://github.com/IonicaBizau/regarde)—A tiny tool and library to watch commands.
+ - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
+ - [`share-term`](https://github.com/Share-Term/share-term#readme)—Share the terminal with your friends.
+ - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
+ - [`statique`](https://github.com/IonicaBizau/statique)—A Node.JS static server module with built-in cache options and route features.
+ - [`tinyreq-cli`](https://github.com/IonicaBizau/tinyreq-cli#readme)—A cli tool for making http(s) requests. CLI for tinyreq.
+ - [`tithe`](https://github.com/IonicaBizau/tithe)—Organize and track the tithe payments.
+ - [`web-term`](https://github.com/IonicaBizau/web-term)—A full screen terminal in your browser.
+ - [`wrabbit`](https://github.com/jillix/wrabbit) (by jillix)—Wrap scripts by providing the wrapping function.
+ - [`xhr-form-submitter-test`](https://github.com/IonicaBizau/xhr-form-submitter.js)—Test application for XHR form submitter JavaScript library
 
- - [`birthday`](https://github.com/IonicaBizau/birthday)
-
- - [`blah`](https://github.com/IonicaBizau/blah)
-
- - [`bloggify`](https://github.com/Bloggify/bloggify-tools)
-
- - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)
-
- - [`cli-gh-cal`](https://github.com/IonicaBizau/cli-gh-cal)
-
- - [`diable`](https://github.com/IonicaBizau/diable)
-
- - [`engine-tools`](https://github.com/jillix/engine-tools) by jillix
-
- - [`fwatcher`](https://github.com/IonicaBizau/node-fwatcher)
-
- - [`ghcal`](https://github.com/IonicaBizau/ghcal)
-
- - [`gif-cli`](https://github.com/IonicaBizau/gif-cli)
-
- - [`git-issues`](https://github.com/softwarescales/git-issues) by Gabriel Petrovay
-
- - [`git-stats`](https://github.com/IonicaBizau/git-stats)
-
- - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)
-
- - [`github-colors`](https://github.com/IonicaBizau/github-colors)
-
- - [`github-labeller`](https://github.com/IonicaBizau/github-labeller#readme)
-
- - [`github-stats`](https://github.com/IonicaBizau/github-stats)
-
- - [`gpm`](https://github.com/IonicaBizau/gpm)
-
- - [`idea`](https://github.com/IonicaBizau/idea)
-
- - [`name-it`](https://github.com/IonicaBizau/name-it#readme)
-
- - [`namy`](https://github.com/IonicaBizau/namy)
-
- - [`npmreserve`](https://github.com/IonicaBizau/npmreserve)
-
- - [`regarde`](https://github.com/IonicaBizau/regarde)
-
- - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)
-
- - [`share-term`](https://github.com/Share-Term/share-term#readme)
-
- - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)
-
- - [`statique`](https://github.com/IonicaBizau/node-statique)
-
- - [`tinyreq`](https://github.com/IonicaBizau/tinyreq)
-
- - [`tithe`](https://github.com/IonicaBizau/tithe)
-
- - [`web-term`](https://github.com/IonicaBizau/web-term)
-
- - [`wrabbit`](https://github.com/jillix/wrabbit) by jillix
-
- - [`xhr-form-submitter-test`](https://github.com/IonicaBizau/xhr-form-submitter.js)
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
