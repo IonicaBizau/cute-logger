@@ -1,5 +1,7 @@
 
-# bug-killer [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-bug-killer.svg)](https://travis-ci.org/IonicaBizau/node-bug-killer/) [![Version](https://img.shields.io/npm/v/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Downloads](https://img.shields.io/npm/dt/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
+# bug-killer
+
+ [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![AMA](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Travis](https://img.shields.io/travis/IonicaBizau/node-bug-killer.svg)](https://travis-ci.org/IonicaBizau/node-bug-killer/) [![Version](https://img.shields.io/npm/v/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Downloads](https://img.shields.io/npm/dt/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > Simple way to log messages in stdout or other stream.
 
@@ -112,6 +114,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 
 
  - [`a-csv`](https://github.com/jillix/a-csv) (by jillix)—A lightweight CSV parser.
+ - [`babel-it`](https://github.com/IonicaBizau/babel-it#readme)—Babelify your code before `npm publish`.
  - [`bible`](https://github.com/BibleJS/BibleApp)—Read the Holy Bible via the command line.
  - [`birthday`](https://github.com/IonicaBizau/birthday)—Know when a friend's birthday is coming.
  - [`blah`](https://github.com/IonicaBizau/blah)—A command line tool to optimize the repetitive actions.
@@ -138,6 +141,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`regarde`](https://github.com/IonicaBizau/regarde)—A tiny tool and library to watch commands.
  - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
  - [`share-term`](https://github.com/Share-Term/share-term#readme)—Share the terminal with your friends.
+ - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
  - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
  - [`statique`](https://github.com/IonicaBizau/statique)—A Node.JS static server module with built-in cache options and route features.
  - [`tinyreq-cli`](https://github.com/IonicaBizau/tinyreq-cli#readme)—A cli tool for making http(s) requests. CLI for tinyreq.
