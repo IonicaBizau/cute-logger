@@ -4,10 +4,11 @@
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
-    "couleurs": "5.0.0",
-    "ansi-parser": "3.0.0",
-    "deffy": "2.0.0",
-    "typpy": "2.0.0"
+    "ansi-parser": "^3.2.5",
+    "couleurs": "^6.0.6",
+    "daty": "^1.0.7",
+    "deffy": "^2.2.2",
+    "typpy": "^2.3.6"
   },
   "devDependencies": {},
   "scripts": {
