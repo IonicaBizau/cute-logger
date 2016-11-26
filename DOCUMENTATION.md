@@ -2,12 +2,6 @@
 
 You can see below the API reference of this module.
 
-### `getDate()`
-Returns the stringified date. This method can be overrided for a custom date format.
-
-#### Return
-- **String** The date in HH:mm.ss - DD.MM.YYYY format.
-
 ### `log(message, type)`
 Displays debug messages by providing the type.
 
@@ -57,4 +51,10 @@ BugKiller.config = {
 
 #### Return
 - **Object** The `BugKiller` instance.
+
+### `getDate()`
+Returns the stringified date. This method can be overrided for a custom date format.
+
+#### Return
+- **String** The date in HH:mm.ss - DD.MM.YYYY format.
 
