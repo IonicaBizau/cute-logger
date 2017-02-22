@@ -30,3 +30,11 @@ Debug.error("This is an error.");
 Debug.info("This is an info message.");
 Debug.warn("This is a warning.");
 Debug.log("This is a log message.");
+
+// Logging objects works nicely too:
+Debug.log({
+    name: {
+        name: "Johnny",
+        last: "B"
+    }
+});
