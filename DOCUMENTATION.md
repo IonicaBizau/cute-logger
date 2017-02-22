@@ -2,8 +2,7 @@
 
 You can see below the API reference of this module.
 
-### `log(message, type)`
-Displays debug messages by providing the type.
+### `log(message, type)`Displays debug messages by providing the type.
 
 Usage:
 
@@ -41,20 +40,59 @@ BugKiller.config = {
   , level: 4
     // Output stream
   , stream: process.stdout
+    // The options passed to `util.inspect`
+  , inspectOptions: { colors: true }
 };
 ````
-
 #### Params
-- **String** `message`: The debug message that should be displayed
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 - **String** `type`: The message type (e.g. "error", "info" etc). Default is computed (`"error"` if the message is an `Error`) or `"info"` if the provided
 `type` is invalid.
 
 #### Return
 - **Object** The `BugKiller` instance.
 
-### `getDate()`
-Returns the stringified date. This method can be overrided for a custom date format.
+### `getDate()`Returns the stringified date. This method can be overrided for a custom date format.
 
 #### Return
 - **String** The date in HH:mm.ss - DD.MM.YYYY format.
+
+### `error(message)`Displays debug messages by providing setting the type to `"error"`.
+
+Usage:
+
+```js
+BugKiller.error("Some error message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
+
+### `warn(message)`Displays debug messages by providing setting the type to `"warn"`.
+
+Usage:
+
+```js
+BugKiller.warn("Some warn message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
+
+### `info(message)`Displays debug messages by providing setting the type to `"info"`.
+
+Usage:
+
+```js
+BugKiller.info("Some info message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
 

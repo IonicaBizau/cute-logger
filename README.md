@@ -43,13 +43,26 @@ Debug.config.myType = {
 Debug.log("This is a custom message type", "myType");
 Debug.log(new Error("Some error"));
 Debug.log("Some interesting message");
+
+// The built-in methods can be accessed like this, too:
+Debug.error("This is an error.");
+Debug.info("This is an info message.");
+Debug.warn("This is a warning.");
+Debug.log("This is a log message.");
+
+// Logging objects works nicely too:
+Debug.log({
+    name: {
+        name: "Johnny",
+        last: "B"
+    }
+});
 ```
 
 ## :memo: Documentation
 
 
-### `log(message, type)`
-Displays debug messages by providing the type.
+### `log(message, type)`Displays debug messages by providing the type.
 
 Usage:
 
@@ -87,22 +100,61 @@ BugKiller.config = {
   , level: 4
     // Output stream
   , stream: process.stdout
+    // The options passed to `util.inspect`
+  , inspectOptions: { colors: true }
 };
 ````
-
 #### Params
-- **String** `message`: The debug message that should be displayed
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 - **String** `type`: The message type (e.g. "error", "info" etc). Default is computed (`"error"` if the message is an `Error`) or `"info"` if the provided
 `type` is invalid.
 
 #### Return
 - **Object** The `BugKiller` instance.
 
-### `getDate()`
-Returns the stringified date. This method can be overrided for a custom date format.
+### `getDate()`Returns the stringified date. This method can be overrided for a custom date format.
 
 #### Return
 - **String** The date in HH:mm.ss - DD.MM.YYYY format.
+
+### `error(message)`Displays debug messages by providing setting the type to `"error"`.
+
+Usage:
+
+```js
+BugKiller.error("Some error message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
+
+### `warn(message)`Displays debug messages by providing setting the type to `"warn"`.
+
+Usage:
+
+```js
+BugKiller.warn("Some warn message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
+
+### `info(message)`Displays debug messages by providing setting the type to `"info"`.
+
+Usage:
+
+```js
+BugKiller.info("Some info message");
+```
+#### Params
+- **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
+
+#### Return
+- **Object** The `BugKiller` instance.
 
 
 
@@ -129,8 +181,8 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`bible`](https://github.com/BibleJS/BibleApp)—Read the Holy Bible via the command line.
  - [`birthday`](https://github.com/IonicaBizau/birthday)—Know when a friend's birthday is coming.
  - [`blah`](https://github.com/IonicaBizau/blah)—A command line tool to optimize the repetitive actions.
- - [`bloggify`](https://github.com/Bloggify/bloggify-tools)—A set of tools for Bloggify administration.
  - [`bloggify-cli`](https://github.com/Bloggify/bloggify-cli#readme)—CLI for Bloggify.
+ - [`bloggify-tools`](https://github.com/Bloggify/bloggify-tools)—Interactive command line tool to help you win at Bloggify.
  - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)—Easy way to import a library into CDNJS.
  - [`cli-gh-cal`](https://github.com/IonicaBizau/cli-gh-cal)—GitHub like calendar graphs in command line.
  - [`diable`](https://github.com/IonicaBizau/diable)—Daemonize the things out.
@@ -141,6 +193,7 @@ If you are using this library in one of your projects, add it in this list. :spa
  - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
  - [`git-stats`](https://github.com/IonicaBizau/git-stats)—Local git statistics including GitHub-like contributions calendars.
  - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)—Imports your commits from a repository into git-stats history.
+ - [`git-unsaved`](https://github.com/IonicaBizau/git-unsaved#readme)—Scan your projects directory for dirty git repositories.
  - [`github-colors`](https://github.com/IonicaBizau/github-colors)—GitHub colors and file extensions mapping
  - [`github-labeller`](https://github.com/IonicaBizau/github-labeller#readme)—Automagically create issue labels in your GitHub projects.
  - [`github-stats`](https://github.com/IonicaBizau/github-stats)—Visualize stats about GitHub users and projects in your terminal.
@@ -171,9 +224,7 @@ If you are using this library in one of your projects, add it in this list. :spa
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 [donate-now]: http://i.imgur.com/6cMbHOC.png
 
-
 [license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(http%3A%2F%2Fionicabizau.net)&year=2014#license-mit
-
 [website]: http://ionicabizau.net
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
