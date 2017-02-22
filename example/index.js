@@ -24,3 +24,9 @@ Debug.config.myType = {
 Debug.log("This is a custom message type", "myType");
 Debug.log(new Error("Some error"));
 Debug.log("Some interesting message");
+
+// The built-in methods can be accessed like this, too:
+Debug.error("This is an error.");
+Debug.info("This is an info message.");
+Debug.warn("This is a warning.");
+Debug.log("This is a log message.");
