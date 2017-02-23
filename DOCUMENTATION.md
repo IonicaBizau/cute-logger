@@ -2,7 +2,8 @@
 
 You can see below the API reference of this module.
 
-### `log(message, type)`Displays debug messages by providing the type.
+### `log(message, type)`
+Displays debug messages by providing the type.
 
 Usage:
 
@@ -52,12 +53,14 @@ BugKiller.config = {
 #### Return
 - **Object** The `BugKiller` instance.
 
-### `getDate()`Returns the stringified date. This method can be overrided for a custom date format.
+### `getDate()`
+Returns the stringified date. This method can be overrided for a custom date format.
 
 #### Return
 - **String** The date in HH:mm.ss - DD.MM.YYYY format.
 
-### `error(message)`Displays debug messages by providing setting the type to `"error"`.
+### `error(message)`
+Displays debug messages by providing setting the type to `"error"`.
 
 Usage:
 
@@ -70,7 +73,8 @@ BugKiller.error("Some error message");
 #### Return
 - **Object** The `BugKiller` instance.
 
-### `warn(message)`Displays debug messages by providing setting the type to `"warn"`.
+### `warn(message)`
+Displays debug messages by providing setting the type to `"warn"`.
 
 Usage:
 
@@ -83,7 +87,8 @@ BugKiller.warn("Some warn message");
 #### Return
 - **Object** The `BugKiller` instance.
 
-### `info(message)`Displays debug messages by providing setting the type to `"info"`.
+### `info(message)`
+Displays debug messages by providing setting the type to `"info"`.
 
 Usage:
 
