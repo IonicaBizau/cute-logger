@@ -45,6 +45,7 @@ BugKiller.config = {
   , inspectOptions: { colors: true }
 };
 ````
+
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 - **String** `type`: The message type (e.g. "error", "info" etc). Default is computed (`"error"` if the message is an `Error`) or `"info"` if the provided
@@ -67,6 +68,7 @@ Usage:
 ```js
 BugKiller.error("Some error message");
 ```
+
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
@@ -81,6 +83,7 @@ Usage:
 ```js
 BugKiller.warn("Some warn message");
 ```
+
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
@@ -95,6 +98,7 @@ Usage:
 ```js
 BugKiller.info("Some info message");
 ```
+
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
