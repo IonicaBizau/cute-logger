@@ -1,40 +1,39 @@
-// Dependencies
-var Debug = require("../lib");
+const Logger = require("../lib")
 
 // Set log level
-Debug.config.level = 4;
+Logger.config.level = 4
 
 // Test defaults
-Debug
+Logger
   .log("A fancy error message", "error")
   .log("Info messages are useful", "info")
   .log("Hey, you've got a warning", "warn")
-  ;
+
 
 // Don't show date
-Debug.config.date = false;
-Debug.log("Display date is disabled.", "info");
+Logger.config.date = false
+Logger.log("Display date is disabled.", "info")
 
 // Custom type
-Debug.config.myType = {
+Logger.config.myType = {
     color: [0, 255, 200]
   , text: "custom"
-};
+}
 
-Debug.log("This is a custom message type", "myType");
-Debug.log(new Error("Some error"));
-Debug.log("Some interesting message");
+Logger.log("This is a custom message type", "myType")
+Logger.log(new Error("Some error"))
+Logger.log("Some interesting message")
 
 // The built-in methods can be accessed like this, too:
-Debug.error("This is an error.");
-Debug.info("This is an info message.");
-Debug.warn("This is a warning.");
-Debug.log("This is a log message.");
+Logger.error("This is an error.")
+Logger.info("This is an info message.")
+Logger.warn("This is a warning.")
+Logger.log("This is a log message.")
 
 // Logging objects works nicely too:
-Debug.log({
+Logger.log({
     name: {
         name: "Johnny",
         last: "B"
     }
-});
+})
