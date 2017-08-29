@@ -1,6 +1,6 @@
 {
   "name": "cute-logger",
-  "version": "4.4.4",
+  "version": "1.0.0",
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
