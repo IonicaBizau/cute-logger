@@ -1,14 +1,16 @@
 
-# bug-killer
+# cute-logger
 
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/node-bug-killer.svg)](https://travis-ci.org/IonicaBizau/node-bug-killer/) [![Version](https://img.shields.io/npm/v/bug-killer.svg)](https://www.npmjs.com/package/bug-killer) [![Downloads](https://img.shields.io/npm/dt/bug-killer.svg)](https://www.npmjs.com/package/bug-killer)
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Travis](https://img.shields.io/travis/IonicaBizau/cute-logger.svg)](https://travis-ci.org/IonicaBizau/cute-logger/) [![Version](https://img.shields.io/npm/v/cute-logger.svg)](https://www.npmjs.com/package/cute-logger) [![Downloads](https://img.shields.io/npm/dt/cute-logger.svg)](https://www.npmjs.com/package/cute-logger)
 
 > Simple way to log messages in stdout or other stream.
+
+[![cute-logger](http://i.imgur.com/VCsF5Si.png)](#)
 
 ## :cloud: Installation
 
 ```sh
-$ npm i --save bug-killer
+$ npm i --save cute-logger
 ```
 
 
@@ -17,46 +19,45 @@ $ npm i --save bug-killer
 
 
 ```js
-// Dependencies
-var Debug = require("bug-killer");
+const Logger = require("cute-logger")
 
 // Set log level
-Debug.config.level = 4;
+Logger.config.level = 4
 
 // Test defaults
-Debug
+Logger
   .log("A fancy error message", "error")
   .log("Info messages are useful", "info")
   .log("Hey, you've got a warning", "warn")
-  ;
+
 
 // Don't show date
-Debug.config.date = false;
-Debug.log("Display date is disabled.", "info");
+Logger.config.date = false
+Logger.log("Display date is disabled.", "info")
 
 // Custom type
-Debug.config.myType = {
+Logger.config.myType = {
     color: [0, 255, 200]
   , text: "custom"
-};
+}
 
-Debug.log("This is a custom message type", "myType");
-Debug.log(new Error("Some error"));
-Debug.log("Some interesting message");
+Logger.log("This is a custom message type", "myType")
+Logger.log(new Error("Some error"))
+Logger.log("Some interesting message")
 
 // The built-in methods can be accessed like this, too:
-Debug.error("This is an error.");
-Debug.info("This is an info message.");
-Debug.warn("This is a warning.");
-Debug.log("This is a log message.");
+Logger.error("This is an error.")
+Logger.info("This is an info message.")
+Logger.warn("This is a warning.")
+Logger.log("This is a log message.")
 
 // Logging objects works nicely too:
-Debug.log({
+Logger.log({
     name: {
         name: "Johnny",
         last: "B"
     }
-});
+})
 ```
 
 ## :question: Get Help
@@ -77,15 +78,15 @@ Displays debug messages by providing the type.
 Usage:
 
 ```js
-BugKiller.log("Some info message");
-BugKiller.log(new Error("Interesting error"));
+CuteLogger.log("Some info message")
+CuteLogger.log(new Error("Interesting error"))
 ```
 
 The config object can be modified to make this module to act diferently.
 Defaults are shown:
 
 ```js
-BugKiller.config = {
+CuteLogger.config = {
     // The error type
     error: {
         color: [192, 57, 43]
@@ -112,7 +113,7 @@ BugKiller.config = {
   , stream: process.stdout
     // The options passed to `util.inspect`
   , inspectOptions: { colors: true }
-};
+}
 ````
 
 #### Params
@@ -121,7 +122,7 @@ BugKiller.config = {
 `type` is invalid.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `getDate()`
 Returns the stringified date. This method can be overrided for a custom date format.
@@ -135,14 +136,14 @@ Displays debug messages by providing setting the type to `"error"`.
 Usage:
 
 ```js
-BugKiller.error("Some error message");
+CuteLogger.error("Some error message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `warn(message)`
 Displays debug messages by providing setting the type to `"warn"`.
@@ -150,14 +151,14 @@ Displays debug messages by providing setting the type to `"warn"`.
 Usage:
 
 ```js
-BugKiller.warn("Some warn message");
+CuteLogger.warn("Some warn message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `info(message)`
 Displays debug messages by providing setting the type to `"info"`.
@@ -165,14 +166,14 @@ Displays debug messages by providing setting the type to `"info"`.
 Usage:
 
 ```js
-BugKiller.info("Some info message");
+CuteLogger.info("Some info message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 
 
@@ -197,50 +198,6 @@ However, if you get some profit from this or just want to encourage me to contin
 Thanks! :heart:
 
 
-## :dizzy: Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-
- - [`3abn`](https://github.com/IonicaBizau/3abn#readme)—A 3ABN radio client in the terminal.
- - [`a-csv`](https://github.com/jillix/a-csv) (by jillix)—A lightweight CSV parser.
- - [`babel-it`](https://github.com/IonicaBizau/babel-it#readme)—Babelify your code before `npm publish`.
- - [`bible`](https://github.com/BibleJS/BibleApp)—Read the Holy Bible via the command line.
- - [`birthday`](https://github.com/IonicaBizau/birthday)—Know when a friend's birthday is coming.
- - [`blah`](https://github.com/IonicaBizau/blah)—A command line tool to optimize the repetitive actions.
- - [`bloggify-cli`](https://github.com/Bloggify/bloggify-cli#readme)—CLI for Bloggify.
- - [`bloggify-tools`](https://github.com/Bloggify/bloggify-tools)—Interactive command line tool to help you win at Bloggify.
- - [`cdnjs-importer`](https://github.com/cdnjs/cdnjs-importer)—Easy way to import a library into CDNJS.
- - [`cli-gh-cal`](https://github.com/IonicaBizau/cli-gh-cal)—GitHub like calendar graphs in command line.
- - [`diable`](https://github.com/IonicaBizau/diable)—Daemonize the things out.
- - [`engine-tools`](https://github.com/jillix/engine-tools) (by jillix)—Engine Tools library and CLI app.
- - [`fwatcher`](https://github.com/IonicaBizau/node-fwatcher)—Watch files for changes.
- - [`ghcal`](https://github.com/IonicaBizau/ghcal)—See the GitHub contributions calendar of a user in the command line.
- - [`gif-cli`](https://github.com/IonicaBizau/gif-cli)—Gif animations in your terminal!
- - [`git-issues`](https://github.com/softwarescales/git-issues) (by Gabriel Petrovay)—Git issues extension to list issues of a Git project
- - [`git-stats`](https://github.com/IonicaBizau/git-stats)—Local git statistics including GitHub-like contributions calendars.
- - [`git-stats-importer`](https://github.com/IonicaBizau/git-stats-importer)—Imports your commits from a repository into git-stats history.
- - [`git-unsaved`](https://github.com/IonicaBizau/git-unsaved#readme)—Scan your projects directory for dirty git repositories.
- - [`github-colors`](https://github.com/IonicaBizau/github-colors)—GitHub colors and file extensions mapping
- - [`github-labeller`](https://github.com/IonicaBizau/github-labeller#readme)—Automagically create issue labels in your GitHub projects.
- - [`github-stats`](https://github.com/IonicaBizau/github-stats)—Visualize stats about GitHub users and projects in your terminal.
- - [`gpm`](https://github.com/IonicaBizau/gpm)—npm + git = gpm - Install NPM packages and dependencies from git repositories.
- - [`idea`](https://github.com/IonicaBizau/idea)—A lightweight CLI tool and module for keeping ideas in a safe place quick and easy.
- - [`image-to-ascii-cli`](https://github.com/IonicaBizau/image-to-ascii-cli#readme)—View images in text format, in your terminal.
- - [`name-it`](https://github.com/IonicaBizau/name-it#readme)—Generate project names from given keywords.
- - [`namy`](https://github.com/IonicaBizau/namy)—Gets the name of the exported function.
- - [`npmreserve`](https://github.com/IonicaBizau/npmreserve)—Reserve package names on NPM.
- - [`regarde`](https://github.com/IonicaBizau/regarde)—A tiny tool and library to watch commands.
- - [`repo-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
- - [`repository-downloader`](https://github.com/IonicaBizau/repository-downloader)—Download all the repositories from BitBucket and GitHub, including your account, teams and where you created pull requests.
- - [`share-term`](https://github.com/Share-Term/share-term#readme)—Share the terminal with your friends.
- - [`ship-release`](https://github.com/IonicaBizau/ship-release#readme)—Publish new versions on GitHub and npm with ease.
- - [`ssh-remote`](https://github.com/IonicaBizau/ssh-remote)—Automagically switch on the SSH remote url in a Git repository.
- - [`statique`](https://github.com/IonicaBizau/statique)—A Node.JS static server module with built-in cache options and route features.
- - [`tinyreq-cli`](https://github.com/IonicaBizau/tinyreq-cli#readme)—A cli tool for making http(s) requests. CLI for tinyreq.
- - [`tithe`](https://github.com/IonicaBizau/tithe)—Organize and track the tithe payments.
- - [`web-term`](https://github.com/IonicaBizau/web-term)—A full screen terminal in your browser.
- - [`wrabbit`](https://github.com/jillix/wrabbit) (by jillix)—Wrap scripts by providing the wrapping function.
- - [`xhr-form-submitter-test`](https://github.com/IonicaBizau/xhr-form-submitter.js)—Test application for XHR form submitter JavaScript library
 
 ## :scroll: License
 

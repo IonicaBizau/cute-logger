@@ -44,5 +44,8 @@
     "menu/",
     "cli.js",
     "index.js"
-  ]
+  ],
+  "blah": {
+      "ex_img": "http://i.imgur.com/VCsF5Si.png"
+  }
 }

@@ -61,6 +61,6 @@ Thanks! :sweat_smile:
 
 
 
-[1]: https://github.com/IonicaBizau/node-bug-killer/issues
+[1]: https://github.com/IonicaBizau/cute-logger/issues
 
 [2]: https://github.com/IonicaBizau/code-style

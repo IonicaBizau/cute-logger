@@ -8,15 +8,15 @@ Displays debug messages by providing the type.
 Usage:
 
 ```js
-BugKiller.log("Some info message");
-BugKiller.log(new Error("Interesting error"));
+CuteLogger.log("Some info message")
+CuteLogger.log(new Error("Interesting error"))
 ```
 
 The config object can be modified to make this module to act diferently.
 Defaults are shown:
 
 ```js
-BugKiller.config = {
+CuteLogger.config = {
     // The error type
     error: {
         color: [192, 57, 43]
@@ -43,7 +43,7 @@ BugKiller.config = {
   , stream: process.stdout
     // The options passed to `util.inspect`
   , inspectOptions: { colors: true }
-};
+}
 ````
 
 #### Params
@@ -52,7 +52,7 @@ BugKiller.config = {
 `type` is invalid.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `getDate()`
 Returns the stringified date. This method can be overrided for a custom date format.
@@ -66,14 +66,14 @@ Displays debug messages by providing setting the type to `"error"`.
 Usage:
 
 ```js
-BugKiller.error("Some error message");
+CuteLogger.error("Some error message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `warn(message)`
 Displays debug messages by providing setting the type to `"warn"`.
@@ -81,14 +81,14 @@ Displays debug messages by providing setting the type to `"warn"`.
 Usage:
 
 ```js
-BugKiller.warn("Some warn message");
+CuteLogger.warn("Some warn message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
 ### `info(message)`
 Displays debug messages by providing setting the type to `"info"`.
@@ -96,12 +96,12 @@ Displays debug messages by providing setting the type to `"info"`.
 Usage:
 
 ```js
-BugKiller.info("Some info message");
+CuteLogger.info("Some info message")
 ```
 
 #### Params
 - **Object** `message`: The debug message that should be displayed. If `message` is an object, it will show the inspected object.
 
 #### Return
-- **Object** The `BugKiller` instance.
+- **Object** The `CuteLogger` instance.
 
