@@ -1,6 +1,6 @@
 {
   "name": "cute-logger",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Simple way to log messages in stdout or other stream.",
   "main": "lib/index.js",
   "dependencies": {
@@ -43,9 +43,12 @@
     "resources/",
     "menu/",
     "cli.js",
-    "index.js"
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
   ],
   "blah": {
-      "ex_img": "http://i.imgur.com/VCsF5Si.png"
+    "ex_img": "http://i.imgur.com/VCsF5Si.png"
   }
 }
