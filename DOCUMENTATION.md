@@ -39,8 +39,11 @@ CuteLogger.config = {
   , date: false
     // Log level
   , level: 4
-    // Output stream
-  , stream: process.stdout
+
+    // Output streams
+  , stdout: process.stdout
+  , stderr: process.stderr
+
     // The options passed to `util.inspect`
   , inspectOptions: { colors: true }
 }
