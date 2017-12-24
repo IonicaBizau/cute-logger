@@ -12,7 +12,11 @@
 ## :cloud: Installation
 
 ```sh
-$ npm i --save cute-logger
+# Using npm
+npm install --save cute-logger
+
+# Using yarn
+yarn add cute-logger
 ```
 
 
